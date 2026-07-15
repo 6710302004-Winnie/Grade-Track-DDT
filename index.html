@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Sarabun:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (ปรับเป็นแบบ UMD CDN ที่เสถียรและระบุเวอร์ชันชัดเจน) -->
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
     
     <style>
         body {
@@ -714,8 +714,14 @@
                 `;
             }
 
-            // โหลดไอคอนใหม่
-            lucide.createIcons();
+            // ตรวจสอบความปลอดภัยและโหลดไอคอนใหม่
+            if (typeof lucide !== 'undefined') {
+                try {
+                    lucide.createIcons();
+                } catch (e) {
+                    console.error('Error rendering lucide icons:', e);
+                }
+            }
         }
 
         // ==========================================
@@ -766,6 +772,7 @@
             render();
         }
 
+        // สลับสถานะเคยลงทะเบียนซ้ำ
         function toggleRepeated(id) {
             subjects = subjects.map(s => s.id === id ? { ...s, isRepeated: !s.isRepeated } : s);
             saveToStorage();
@@ -843,9 +850,15 @@
             render();
         }
 
-        // โหลดครั้งแรก
+        // โหลดครั้งแรกเมื่อเบราว์เซอร์พร้อมทำงาน
         window.onload = function() {
             render();
+            // เรียกซ้ำอีกครั้งหลังจากหน้าโหลด เผื่อมีกรณีที่ Lucide โหลดเสร็จทีหลัง
+            setTimeout(function() {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }, 100);
         }
     </script>
 </body>
