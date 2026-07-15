@@ -3,49 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>DDT Grade Calculator</title>
+    <title>DDT Grade Calculator - Design System</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter & Sarabun -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Sarabun:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons (ใช้สำหรับ Icon) -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
         body {
             font-family: 'Sarabun', 'Inter', sans-serif;
-            background-color: #e0e5ec;
+            background-color: #F6F6F6;
             -webkit-tap-highlight-color: transparent;
-            overflow: hidden; /* ป้องกันไม่ให้ทั้งหน้าจอหลักสกรอลล์เบิ้ล */
+            overflow: hidden;
             height: 100vh;
-            height: 100dvh; /* ปรับให้พอดีกับ Dynamic Viewport บนมือถือจริง */
+            height: 100dvh;
         }
         .font-inter {
             font-family: 'Inter', sans-serif;
         }
-        /* Neumorphism Shadow Utilities */
+        
+        /* Neumorphism Shadow Utilities (ตามสีพื้นหลัง #F6F6F6 ใน Design System) */
         .neo-box {
-            background: #e0e5ec;
-            box-shadow: 6px 6px 12px #a3b1c6, -6px -6px 12px #ffffff;
+            background: #F6F6F6;
+            box-shadow: 6px 6px 14px #d1d1d1, -6px -6px 14px #ffffff;
         }
         .neo-box-sm {
-            background: #e0e5ec;
-            box-shadow: 4px 4px 8px #a3b1c6, -4px -4px 8px #ffffff;
+            background: #F6F6F6;
+            box-shadow: 4px 4px 10px #d8d8d8, -4px -4px 10px #ffffff;
         }
         .neo-box-xs {
-            background: #e0e5ec;
-            box-shadow: 2px 2px 5px #a3b1c6, -2px -2px 5px #ffffff;
+            background: #F6F6F6;
+            box-shadow: 2px 2px 6px #dbdbdb, -2px -2px 6px #ffffff;
         }
         .neo-inset {
-            background: #e0e5ec;
-            box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
+            background: #F6F6F6;
+            box-shadow: inset 4px 4px 8px #d5d5d5, inset -4px -4px 8px #ffffff;
         }
         .neo-inset-sm {
-            background: #e0e5ec;
-            box-shadow: inset 2px 2px 4px #a3b1c6, inset -2px -2px 4px #ffffff;
+            background: #F6F6F6;
+            box-shadow: inset 2px 2px 5px #d8d8d8, inset -2px -2px 5px #ffffff;
         }
+        
         /* ซ่อน Scrollbar */
         .scrollbar-none::-webkit-scrollbar {
             display: none;
@@ -56,31 +58,31 @@
         }
     </style>
 </head>
-<body class="text-[#2d3748] flex justify-center items-center w-full">
+<body class="text-[#132045] flex justify-center items-center w-full">
 
     <!-- ฟิตขนาดเท่าหน้าจอโทรศัพท์จริงแบบพอดีเป๊ะ (Full Mobile Screen Layout) -->
-    <div class="w-full h-full max-w-[430px] bg-[#e0e5ec] flex flex-col relative overflow-hidden">
+    <div class="w-full h-full max-w-[430px] bg-[#F6F6F6] flex flex-col relative overflow-hidden">
         
         <!-- Header ส่วนบนสุด (คงที่) -->
-        <header class="pt-6 pb-3 px-5 text-center border-b border-gray-200/20 bg-[#e0e5ec] shrink-0">
+        <header class="pt-6 pb-3 px-5 text-center border-b border-gray-100 bg-[#F6F6F6] shrink-0">
             <div class="flex items-center justify-between mb-1">
-                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-inter">DDT Grade Hub</span>
-                <span class="text-[10px] bg-[#4d69ff]/10 text-[#4d69ff] py-0.5 px-2 rounded-full font-bold">Note 10+ Optimized</span>
+                <span class="text-[10px] font-extrabold text-[#009FDF] uppercase tracking-widest font-inter">DDT Grade Hub</span>
+                <span class="text-[10px] bg-[#E2F8FF] text-[#009FDF] py-0.5 px-2 rounded-full font-bold">Design System Pro</span>
             </div>
-            <h1 class="text-lg font-extrabold text-[#4d69ff]">ออกแบบดิจิทัลและเทคโนโลยี</h1>
-            <p class="text-[10px] text-gray-500 mt-0.5">ระบบคำนวณและประเมินผลการเรียนหลักสูตร 133 หน่วยกิต</p>
+            <h1 class="text-xl font-black text-[#132045]">ออกแบบดิจิทัลและเทคโนโลยี</h1>
+            <p class="text-[10px] text-gray-400 mt-0.5">ระบบประเมินผลการเรียนหลักสูตร 133 หน่วยกิต</p>
         </header>
 
-        <!-- ส่วนเนื้อหา (สามารถเลื่อนสกรอลล์ได้ โดยไม่พังหน้าจอ) -->
+        <!-- ส่วนเนื้อหา (สกรอลล์อิสระ) -->
         <main id="main-content" class="flex-1 overflow-y-auto px-4 py-4 space-y-4 scrollbar-none pb-24">
-            <!-- Content จะถูกเรนเดอร์ผ่าน JavaScript ตาม Tab ที่เลือก -->
+            <!-- Content ถูกเรนเดอร์ผ่าน JS -->
         </main>
 
         <!-- Modal: เพิ่มรายวิชาใหม่ -->
-        <div id="add-modal" class="hidden absolute inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4 z-50">
-            <div class="w-full max-w-[370px] bg-[#e0e5ec] rounded-3xl shadow-[12px_12px_24px_rgba(0,0,0,0.15),-12px_-12px_24px_rgba(255,255,255,0.8)] p-5 space-y-4 text-left border border-white/20">
+        <div id="add-modal" class="hidden absolute inset-0 bg-black/30 backdrop-blur-xs flex items-center justify-center p-4 z-50">
+            <div class="w-full max-w-[370px] bg-[#F6F6F6] rounded-[30px] shadow-[12px_12px_24px_rgba(0,0,0,0.1),-12px_-12px_24px_rgba(255,255,255,0.9)] p-5 space-y-4 text-left border border-white">
                 <div class="flex justify-between items-center">
-                    <h3 class="text-sm font-extrabold text-gray-700">➕ เพิ่มรายวิชาใหม่</h3>
+                    <h3 class="text-sm font-extrabold text-[#132045]">➕ เพิ่มรายวิชาใหม่</h3>
                     <button onclick="toggleModal(false)" class="p-1 rounded-full text-gray-400 hover:text-gray-600 font-bold text-xs">
                         ✖
                     </button>
@@ -88,24 +90,24 @@
 
                 <form id="add-subject-form" onsubmit="handleAddSubject(event)" class="space-y-3 text-xs">
                     <div class="space-y-1">
-                        <label class="font-bold text-gray-600">รหัสวิชา (Subject Code)</label>
-                        <input type="text" id="modal-code" required placeholder="เช่น DDT301" class="w-full px-3 py-2 rounded-xl neo-inset-sm text-gray-700 focus:outline-none font-inter">
+                        <label class="font-bold text-gray-500">รหัสวิชา (Subject Code)</label>
+                        <input type="text" id="modal-code" required placeholder="เช่น DDT301" class="w-full px-4 py-2.5 rounded-[50px] neo-inset-sm text-gray-700 focus:outline-none focus:border-2 focus:border-[#009FDF] font-inter">
                     </div>
 
                     <div class="space-y-1">
-                        <label class="font-bold text-gray-600">ชื่อวิชาภาษาไทย</label>
-                        <input type="text" id="modal-nameTh" required placeholder="เช่น การออกแบบส่วนติดต่อผู้ใช้งาน" class="w-full px-3 py-2 rounded-xl neo-inset-sm text-gray-700 focus:outline-none">
+                        <label class="font-bold text-gray-500">ชื่อวิชาภาษาไทย</label>
+                        <input type="text" id="modal-nameTh" required placeholder="เช่น การออกแบบส่วนติดต่อผู้ใช้งาน" class="w-full px-4 py-2.5 rounded-[50px] neo-inset-sm text-gray-700 focus:outline-none focus:border-2 focus:border-[#009FDF]">
                     </div>
 
                     <div class="space-y-1">
-                        <label class="font-bold text-gray-600">ชื่อวิชาภาษาอังกฤษ</label>
-                        <input type="text" id="modal-nameEn" required placeholder="เช่น User Interface Design" class="w-full px-3 py-2 rounded-xl neo-inset-sm text-gray-700 focus:outline-none font-inter">
+                        <label class="font-bold text-gray-500">ชื่อวิชาภาษาอังกฤษ</label>
+                        <input type="text" id="modal-nameEn" required placeholder="เช่น User Interface Design" class="w-full px-4 py-2.5 rounded-[50px] neo-inset-sm text-gray-700 focus:outline-none focus:border-2 focus:border-[#009FDF] font-inter">
                     </div>
 
                     <div class="grid grid-cols-2 gap-3">
                         <div class="space-y-1">
-                            <label class="font-bold text-gray-600">จำนวนหน่วยกิต</label>
-                            <select id="modal-credits" class="w-full px-3 py-2 rounded-xl neo-inset-sm text-gray-700 focus:outline-none">
+                            <label class="font-bold text-gray-500">จำนวนหน่วยกิต</label>
+                            <select id="modal-credits" class="w-full px-3 py-2 rounded-[50px] neo-inset-sm text-gray-700 focus:outline-none">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3" selected>3</option>
@@ -116,8 +118,8 @@
                         </div>
 
                         <div class="space-y-1">
-                            <label class="font-bold text-gray-600">เกรดที่ได้</label>
-                            <select id="modal-grade" class="w-full px-3 py-2 rounded-xl neo-inset-sm text-gray-700 focus:outline-none">
+                            <label class="font-bold text-gray-500">เกรดที่ได้</label>
+                            <select id="modal-grade" class="w-full px-3 py-2 rounded-[50px] neo-inset-sm text-gray-700 focus:outline-none">
                                 <option value="">ยังไม่เรียน</option>
                                 <option value="A">A</option>
                                 <option value="B+">B+</option>
@@ -133,41 +135,41 @@
                     </div>
 
                     <div class="space-y-1">
-                        <label class="font-bold text-gray-600">หมวดหมู่หลักสูตร</label>
-                        <select id="modal-category" onchange="handleModalCategoryChange()" class="w-full px-3 py-2 rounded-xl neo-inset-sm text-gray-700 focus:outline-none">
-                            <option value="general">หมวดวิชาศึกษาทั่วไป (General Education) [33 นก.]</option>
-                            <option value="core">กลุ่มวิชาแกน (Core Courses) [27 นก.]</option>
-                            <option value="major_required">กลุ่มวิชาชีพบังคับ (Major Required) [52 นก.]</option>
-                            <option value="major_elective">กลุ่มวิชาชีพเลือก (Major Elective) [15 นก.]</option>
-                            <option value="free_elective">หมวดเลือกเสรี (Free Electives) [6 นก.]</option>
+                        <label class="font-bold text-gray-500">หมวดหมู่หลักสูตร</label>
+                        <select id="modal-category" onchange="handleModalCategoryChange()" class="w-full px-3 py-2.5 rounded-[50px] neo-inset-sm text-gray-700 focus:outline-none">
+                            <option value="general">หมวดวิชาศึกษาทั่วไป (General Education)</option>
+                            <option value="core">กลุ่มวิชาแกน (Core Courses)</option>
+                            <option value="major_required">กลุ่มวิชาชีพบังคับ (Major Required)</option>
+                            <option value="major_elective">กลุ่มวิชาชีพเลือก (Major Elective)</option>
+                            <option value="free_elective">หมวดเลือกเสรี (Free Electives)</option>
                         </select>
                     </div>
 
                     <div id="modal-subCategory-container" class="space-y-1">
-                        <label class="font-bold text-gray-600">กลุ่มวิชาย่อยศึกษาทั่วไป</label>
-                        <select id="modal-subCategory" class="w-full px-3 py-2 rounded-xl neo-inset-sm text-gray-700 focus:outline-none">
-                            <option value="1.1 ภาษาไทย">1.1 กลุ่มวิชาภาษาไทย (ไม่น้อยกว่า 3 นก.)</option>
-                            <option value="1.2 ภาษาต่างประเทศ">1.2 กลุ่มวิชาภาษาต่างประเทศ (ไม่น้อยกว่า 6 นก.)</option>
-                            <option value="1.3 วิทยาศาสตร์">1.3 กลุ่มวิชาวิทยาศาสตร์ (ไม่น้อยกว่า 3 นก.)</option>
-                            <option value="1.4 คณิตศาสตร์">1.4 กลุ่มวิชาคณิตศาสตร์ (ไม่น้อยกว่า 3 นก.)</option>
-                            <option value="1.5 สังคมศาสตร์">1.5 กลุ่มวิชาสังคมศาสตร์ (ไม่น้อยกว่า 3 นก.)</option>
-                            <option value="1.6 มนุษยศาสตร์">1.6 กลุ่มวิชามนุษยศาสตร์ (ไม่น้อยกว่า 3 นก.)</option>
+                        <label class="font-bold text-gray-500">กลุ่มวิชาย่อยศึกษาทั่วไป</label>
+                        <select id="modal-subCategory" class="w-full px-3 py-2.5 rounded-[50px] neo-inset-sm text-gray-700 focus:outline-none">
+                            <option value="1.1 ภาษาไทย">1.1 กลุ่มวิชาภาษาไทย (3 นก.)</option>
+                            <option value="1.2 ภาษาต่างประเทศ">1.2 กลุ่มวิชาภาษาต่างประเทศ (6 นก.)</option>
+                            <option value="1.3 วิทยาศาสตร์">1.3 กลุ่มวิชาวิทยาศาสตร์ (3 นก.)</option>
+                            <option value="1.4 คณิตศาสตร์">1.4 กลุ่มวิชาคณิตศาสตร์ (3 นก.)</option>
+                            <option value="1.5 สังคมศาสตร์">1.5 กลุ่มวิชาสังคมศาสตร์ (3 นก.)</option>
+                            <option value="1.6 มนุษยศาสตร์">1.6 กลุ่มวิชามนุษยศาสตร์ (3 นก.)</option>
                             <option value="อื่น ๆ ในศึกษาทั่วไป" selected>อื่น ๆ ในกลุ่มวิชาเลือกทั่วไป</option>
                         </select>
                     </div>
 
                     <div class="flex items-center space-x-2 pt-2">
-                        <input type="checkbox" id="modal-isRepeated" class="w-4 h-4 text-indigo-600 focus:ring-0 rounded bg-[#e0e5ec]">
-                        <label for="modal-isRepeated" class="font-bold text-gray-600 cursor-pointer">
+                        <input type="checkbox" id="modal-isRepeated" class="w-4 h-4 text-[#009FDF] focus:ring-0 rounded-[50px] bg-[#F6F6F6]">
+                        <label for="modal-isRepeated" class="font-bold text-gray-500 cursor-pointer">
                             เคยลงทะเบียนวิชานี้ซ้ำเพื่อแก้เกรด / รีเกรด
                         </label>
                     </div>
 
                     <div class="flex space-x-3 pt-3">
-                        <button type="button" onclick="toggleModal(false)" class="flex-1 py-2 rounded-xl bg-gray-100 text-gray-600 font-bold border border-gray-200 text-center hover:bg-gray-200">
+                        <button type="button" onclick="toggleModal(false)" class="flex-1 py-2.5 rounded-[50px] bg-gray-100 text-gray-600 font-bold border border-gray-200 text-center">
                             ยกเลิก
                         </button>
-                        <button type="submit" class="flex-1 py-2 rounded-xl bg-indigo-600 text-white font-bold text-center hover:bg-indigo-700 shadow-md">
+                        <button type="submit" class="flex-1 py-2.5 rounded-[50px] bg-[#009FDF] text-white font-bold text-center shadow-md">
                             บันทึกวิชา
                         </button>
                     </div>
@@ -176,23 +178,23 @@
         </div>
 
         <!-- แถบเมนูด้านล่างสุด (คงที่และสัดส่วนพอดีเสมอ) -->
-        <nav class="absolute bottom-0 inset-x-0 h-16 bg-[#e0e5ec] shadow-[0_-3px_10px_rgba(163,177,198,0.5)] flex justify-around items-center px-2 z-40 border-t border-gray-200/20 shrink-0">
-            <button onclick="switchTab('dashboard')" id="nav-dashboard" class="flex flex-col items-center justify-center flex-1 py-1 transition text-indigo-600 font-bold">
+        <nav class="absolute bottom-0 inset-x-0 h-16 bg-[#F6F6F6] shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex justify-around items-center px-2 z-40 border-t border-gray-100 shrink-0">
+            <button onclick="switchTab('dashboard')" id="nav-dashboard" class="flex flex-col items-center justify-center flex-1 py-1 transition text-[#009FDF] font-bold">
                 <i data-lucide="book-marked" class="w-5 h-5 mb-0.5"></i>
                 <span class="text-[9px]">หน้าแรก</span>
             </button>
 
-            <button onclick="switchTab('subjects')" id="nav-subjects" class="flex flex-col items-center justify-center flex-1 py-1 transition text-gray-500">
+            <button onclick="switchTab('subjects')" id="nav-subjects" class="flex flex-col items-center justify-center flex-1 py-1 transition text-gray-400">
                 <i data-lucide="book-open" class="w-5 h-5 mb-0.5"></i>
                 <span class="text-[9px]">วิชาเรียน</span>
             </button>
 
-            <button onclick="switchTab('honor-check')" id="nav-honor-check" class="flex flex-col items-center justify-center flex-1 py-1 transition text-gray-500">
+            <button onclick="switchTab('honor-check')" id="nav-honor-check" class="flex flex-col items-center justify-center flex-1 py-1 transition text-gray-400">
                 <i data-lucide="award" class="w-5 h-5 mb-0.5"></i>
                 <span class="text-[9px]">เกียรตินิยม</span>
             </button>
 
-            <button onclick="switchTab('predict')" id="nav-predict" class="flex flex-col items-center justify-center flex-1 py-1 transition text-gray-500">
+            <button onclick="switchTab('predict')" id="nav-predict" class="flex flex-col items-center justify-center flex-1 py-1 transition text-gray-400">
                 <i data-lucide="sliders" class="w-5 h-5 mb-0.5"></i>
                 <span class="text-[9px]">คาดการณ์</span>
             </button>
@@ -360,48 +362,52 @@
                 if (cal.honorStatus === '2nd') honorLabel = '🥈 เกียรตินิยมอันดับ 2';
 
                 container.innerHTML = `
-                    <div class="space-y-4">
-                        <!-- การ์ด GPAX รวม Neumorphism -->
-                        <div class="p-4 rounded-2xl neo-box flex flex-col items-center text-center">
-                            <span class="text-xs font-semibold text-gray-600 mb-1">คะแนนเฉลี่ยสะสม (GPAX)</span>
-                            <div class="relative w-28 h-28 rounded-full flex items-center justify-center neo-inset mb-2">
-                                <div class="text-center">
-                                    <span class="text-3xl font-extrabold text-indigo-600 block font-inter">${cal.gpax.toFixed(2)}</span>
-                                    <span class="text-[9px] text-emerald-600 font-bold tracking-wide uppercase">
-                                        ${cal.gpax >= 3.75 ? 'Honor Candidate' : cal.gpax >= 2.0 ? 'Active state' : 'Probation risk'}
+                    <div class="space-y-4 animate-fade-in">
+                        <!-- การ์ด GPAX รวม Neumorphism (ตามสไตล์ Guide) -->
+                        <div class="p-5 rounded-[30px] neo-box flex flex-col items-center text-center">
+                            <span class="text-xs font-bold text-gray-500 mb-1">คะแนนเฉลี่ยสะสม (GPAX)</span>
+                            
+                            <!-- วงแหวนเกรดใช้ Teal #00C2B2 เป็น Accent ตามสเปก -->
+                            <div class="relative w-32 h-32 rounded-full flex items-center justify-center neo-inset mb-3">
+                                <div class="absolute inset-2 rounded-full border-4 border-[#00C2B2] opacity-80"></div>
+                                <div class="text-center z-10">
+                                    <span class="text-3xl font-extrabold text-[#132045] block font-inter">${cal.gpax.toFixed(2)}</span>
+                                    <span class="text-[9px] text-[#00C2B2] font-extrabold tracking-wide uppercase font-inter">
+                                        ${cal.gpax >= 3.75 ? 'First Class' : cal.gpax >= 3.25 ? 'Second Class' : 'Active State'}
                                     </span>
                                 </div>
                             </div>
-                            <!-- Progress Bar -->
+                            
+                            <!-- Progress Bar แคปซูลมนสุด (Teal #00C2B2 & Deep Indigo) -->
                             <div class="w-full mt-1">
-                                <div class="flex justify-between text-[11px] font-semibold mb-0.5">
-                                    <span class="text-gray-500">ผ่านแล้ว: ${cal.completedCredits} / 133 หน่วยกิต</span>
-                                    <span class="text-indigo-600 font-bold">${percent}%</span>
+                                <div class="flex justify-between text-[11px] font-bold text-[#132045] mb-1">
+                                    <span class="text-gray-500">ผ่านสะสมแล้ว: ${cal.completedCredits} / 133 นก.</span>
+                                    <span class="text-[#00C2B2] font-extrabold">${percent}%</span>
                                 </div>
-                                <div class="w-full h-2.5 neo-inset rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transition-all duration-500" style="width: ${percent}%"></div>
+                                <div class="w-full h-3 neo-inset rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-[#00C2B2] to-[#009FDF] rounded-full transition-all duration-500" style="width: ${percent}%"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- การ์ดผลเกียรตินิยมแบบเร็ว -->
-                        <div class="p-3.5 rounded-2xl neo-box flex items-center space-x-3 border-l-4 border-amber-400">
-                            <div class="p-1.5 rounded-xl bg-amber-100 text-amber-600 shadow-inner">
+                        <!-- การ์ดผลเกียรตินิยมแบบด่วน (Radius 30, ขอบสีทองเงียบสงบ) -->
+                        <div class="p-4 rounded-[30px] neo-box flex items-center space-x-3 border-l-4 border-[#00C2B2]">
+                            <div class="p-2 rounded-[50px] bg-[#E2F8FF] text-[#00C2B2] shadow-inner shrink-0">
                                 <i data-lucide="award" class="w-5 h-5"></i>
                             </div>
                             <div class="flex-1 min-w-0">
-                                <h4 class="text-[10px] text-gray-500 font-bold">ประมาณการเกียรตินิยม</h4>
-                                <p class="text-xs font-bold text-gray-800 truncate">${honorLabel}</p>
+                                <h4 class="text-[9px] text-gray-400 font-bold uppercase tracking-wider font-inter">Honor Candidate</h4>
+                                <p class="text-xs font-black text-[#132045] truncate">${honorLabel}</p>
                             </div>
-                            <button onclick="switchTab('honor-check')">
-                                <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                            <button onclick="switchTab('honor-check')" class="p-2 rounded-full hover:bg-gray-100 active:scale-95 transition">
+                                <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400"></i>
                             </button>
                         </div>
 
-                        <!-- รายการความคืบหน้าแบ่งตามหมวดหมู่หลัก -->
+                        <!-- สัดส่วนหน่วยกิตรายหมวดหมู่ (Clean Rounded Radius 30) -->
                         <div class="space-y-2.5">
-                            <h3 class="text-xs font-extrabold text-gray-600 uppercase tracking-wide flex items-center">
-                                <i data-lucide="book-open" class="w-3.5 h-3.5 mr-1 text-indigo-500"></i>
+                            <h3 class="text-xs font-extrabold text-[#132045] uppercase tracking-wide flex items-center">
+                                <i data-lucide="book-open" class="w-3.5 h-3.5 mr-1 text-[#00C2B2]"></i>
                                 สัดส่วนหน่วยกิตรายหมวดหมู่
                             </h3>
                             ${Object.entries(CATEGORIES).map(([key, cat]) => {
@@ -409,14 +415,16 @@
                                 const required = cat.requiredCredits;
                                 const catPercent = Math.min(100, Math.round((currentCredits / required) * 100));
                                 return `
-                                    <div class="p-3 rounded-xl neo-box-sm space-y-1.5">
+                                    <div class="p-3.5 rounded-[30px] neo-box-sm space-y-2">
                                         <div class="flex justify-between items-center text-[11px]">
-                                            <span class="font-bold text-gray-700 truncate w-2/3">${cat.name}</span>
-                                            <span class="font-semibold text-gray-500 shrink-0">${currentCredits}/${required} <span class="text-[9px] text-gray-400">นก.</span></span>
+                                            <span class="font-extrabold text-[#132045] truncate w-2/3">${cat.name}</span>
+                                            <span class="font-bold text-[#00C2B2] shrink-0 font-inter">
+                                                ${currentCredits}/${required} <span class="text-[9px] text-gray-400 font-normal">นก.</span>
+                                            </span>
                                         </div>
                                         <div class="relative">
-                                            <div class="overflow-hidden h-1.5 rounded neo-inset">
-                                                <div style="width: ${catPercent}%" class="h-full bg-gradient-to-r from-[#4d69ff] to-[#6b82ff] rounded transition-all duration-300"></div>
+                                            <div class="overflow-hidden h-2.5 rounded-full neo-inset">
+                                                <div style="width: ${catPercent}%" class="h-full bg-gradient-to-r from-[#00C2B2] to-[#4BC2E4] rounded-full transition-all duration-300"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -437,70 +445,72 @@
                 });
 
                 container.innerHTML = `
-                    <div class="space-y-3.5">
-                        <!-- ตัวคัดกรองและช่องค้นหา -->
+                    <div class="space-y-3.5 animate-fade-in">
+                        <!-- ค้นหาและปุ่มเพิ่ม (สไตล์แคปซูล Radius 50) -->
                         <div class="space-y-2 shrink-0">
                             <div class="flex space-x-2">
-                                <input type="text" id="search-input" value="${searchQuery}" oninput="handleSearch(this.value)" placeholder="🔍 ค้นหารหัส หรือชื่อรายวิชา..." class="flex-1 px-3 py-1.5 text-xs rounded-xl neo-inset text-gray-700 placeholder-gray-400 focus:outline-none">
-                                <button onclick="toggleModal(true)" class="p-2 rounded-xl bg-indigo-600 text-white shadow-md active:scale-95">
-                                    <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                                <input type="text" id="search-input" value="${searchQuery}" oninput="handleSearch(this.value)" placeholder="🔍 ค้นหารหัส หรือชื่อรายวิชา..." class="flex-1 px-4 py-2 text-xs rounded-[50px] neo-inset text-gray-700 placeholder-gray-400 focus:outline-none focus:border-2 focus:border-[#009FDF] font-inter">
+                                <button onclick="toggleModal(true)" class="p-2.5 rounded-full bg-[#009FDF] text-white shadow-md active:scale-95 transition shrink-0">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
                                 </button>
                             </div>
 
-                            <!-- แถบเลื่อนหมวดหมู่แนวนอน -->
+                            <!-- แถบเลื่อนหมวดหมู่ (Capsule horizontal list) -->
                             <div class="flex space-x-1.5 overflow-x-auto pb-1 scrollbar-none">
-                                <button onclick="setFilterCategory('all')" class="px-2.5 py-1 text-[10px] font-bold rounded-full whitespace-nowrap transition ${filterCategory === 'all' ? 'bg-indigo-600 text-white shadow-md' : 'neo-box-xs text-gray-600'}">ทั้งหมด</button>
+                                <button onclick="setFilterCategory('all')" class="px-3 py-1.5 text-[10px] font-extrabold rounded-[50px] whitespace-nowrap transition ${filterCategory === 'all' ? 'bg-[#009FDF] text-white shadow-md' : 'neo-box-xs text-gray-500'}">ทั้งหมด</button>
                                 ${Object.entries(CATEGORIES).map(([key, val]) => `
-                                    <button onclick="setFilterCategory('${key}')" class="px-2.5 py-1 text-[10px] font-bold rounded-full whitespace-nowrap transition ${filterCategory === key ? 'bg-indigo-600 text-white shadow-md' : 'neo-box-xs text-gray-600'}">
+                                    <button onclick="setFilterCategory('${key}')" class="px-3 py-1.5 text-[10px] font-extrabold rounded-[50px] whitespace-nowrap transition ${filterCategory === key ? 'bg-[#009FDF] text-white shadow-md' : 'neo-box-xs text-gray-500'}">
                                         ${val.name.split(' (')[0]}
                                     </button>
                                 `).join('')}
                             </div>
                         </div>
 
-                        <!-- รายการวิชา -->
+                        <!-- รายการวิชาเรียนสะสม -->
                         <div class="space-y-2">
-                            <div class="flex justify-between items-center text-[11px]">
-                                <span class="text-gray-500 font-bold">แสดง ${filtered.length} รายการวิชา</span>
-                                <button onclick="resetData()" class="text-[10px] text-rose-500 hover:underline flex items-center">
+                            <div class="flex justify-between items-center text-[11px] px-1">
+                                <span class="text-gray-400 font-bold">แสดง ${filtered.length} รายการ</span>
+                                <button onclick="resetData()" class="text-[10px] text-rose-500 font-bold hover:underline flex items-center">
                                     <i data-lucide="rotate-ccw" class="w-3 h-3 mr-0.5"></i>รีเซ็ตทั้งหมด
                                 </button>
                             </div>
 
-                            <div class="space-y-2.5 max-h-[58vh] overflow-y-auto pr-1 scrollbar-none">
+                            <div class="space-y-3 max-h-[55vh] overflow-y-auto pr-1 scrollbar-none">
                                 ${filtered.map(s => `
-                                    <div class="p-3 rounded-xl neo-box-sm space-y-2 relative">
+                                    <div class="p-4 rounded-[30px] neo-box-sm space-y-2 relative border border-gray-100">
                                         <div class="flex justify-between items-start">
                                             <div>
-                                                <span class="text-[9px] font-extrabold text-[#4d69ff] bg-indigo-50 px-1.5 py-0.5 rounded border border-indigo-100 font-inter">${s.code || 'NO-CODE'}</span>
-                                                <span class="text-[9px] font-semibold text-gray-400 ml-1 uppercase">${s.credits} หน่วยกิต</span>
+                                                <span class="text-[9px] font-extrabold text-[#009FDF] bg-[#E2F8FF] px-2 py-0.5 rounded-full font-inter">${s.code || 'NO-CODE'}</span>
+                                                <span class="text-[9px] font-bold text-gray-400 ml-1.5 uppercase font-inter">${s.credits} หน่วยกิต</span>
                                             </div>
-                                            <div class="flex items-center space-x-1">
-                                                <button onclick="toggleRepeated('${s.id}')" class="px-1 py-0.5 rounded text-[8px] font-bold ${s.isRepeated ? 'bg-amber-100 text-amber-700 border border-amber-300' : 'bg-gray-100 text-gray-400 border border-gray-200'}">
+                                            <div class="flex items-center space-x-1.5">
+                                                <!-- สวิตช์ตรวจสอบสถานะเรียนซ้ำตาม Style System -->
+                                                <button onclick="toggleRepeated('${s.id}')" class="px-2 py-0.5 rounded-[50px] text-[8px] font-extrabold transition ${s.isRepeated ? 'bg-amber-100 text-amber-700 border border-amber-300' : 'bg-gray-100 text-gray-400 border border-gray-200'}">
                                                     ${s.isRepeated ? 'เรียนซ้ำ' : 'ปกติ'}
                                                 </button>
-                                                <button onclick="deleteSubject('${s.id}')" class="p-1 text-rose-400 hover:text-rose-600">
-                                                    <i data-lucide="trash-2" class="w-3 h-3"></i>
+                                                <button onclick="deleteSubject('${s.id}')" class="p-1 text-rose-400 hover:text-rose-600 transition">
+                                                    <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
                                                 </button>
                                             </div>
                                         </div>
 
                                         <div>
-                                            <h4 class="text-xs font-bold text-gray-800 leading-tight">${s.nameTh}</h4>
-                                            <p class="text-[9px] text-gray-500 truncate font-inter">${s.nameEn}</p>
+                                            <h4 class="text-xs font-black text-[#132045] leading-tight">${s.nameTh}</h4>
+                                            <p class="text-[9px] text-gray-400 truncate font-inter font-semibold mt-0.5">${s.nameEn}</p>
                                         </div>
 
-                                        <div class="flex justify-between items-center pt-1.5 border-t border-gray-200/50">
-                                            <span class="text-[8px] text-indigo-500 font-bold max-w-[170px] truncate">
-                                                🏷️ ${CATEGORIES[s.category].name.split(' (')[0]}
+                                        <div class="flex justify-between items-center pt-2 border-t border-gray-100">
+                                            <span class="text-[8px] text-gray-400 font-extrabold max-w-[170px] truncate">
+                                                📂 ${CATEGORIES[s.category].name.split(' (')[0]}
                                             </span>
                                             
-                                            <select onchange="updateGrade('${s.id}', this.value)" class="px-1.5 py-0.5 text-[11px] font-bold rounded focus:outline-none border ${
-                                                s.grade === 'A' ? 'bg-emerald-100 text-emerald-800 border-emerald-300' :
-                                                s.grade === 'B+' || s.grade === 'B' ? 'bg-blue-100 text-blue-800 border-blue-300' :
-                                                s.grade === 'C+' || s.grade === 'C' ? 'bg-amber-100 text-amber-800 border-amber-300' :
-                                                s.grade === 'F' ? 'bg-rose-100 text-rose-800 border-rose-300' :
-                                                s.grade === '' ? 'bg-gray-100 text-gray-500 border-gray-200' : 'bg-gray-200 text-gray-700'
+                                            <!-- Select Dropdown ทรงแคปซูล Radius 50 -->
+                                            <select onchange="updateGrade('${s.id}', this.value)" class="px-2 py-0.5 text-[11px] font-extrabold rounded-[50px] focus:outline-none border-2 ${
+                                                s.grade === 'A' ? 'bg-[#E2F8FF] text-[#00C2B2] border-[#00C2B2]' :
+                                                s.grade === 'B+' || s.grade === 'B' ? 'bg-[#E2F8FF] text-[#009FDF] border-[#009FDF]' :
+                                                s.grade === 'C+' || s.grade === 'C' ? 'bg-amber-50 text-amber-600 border-amber-300' :
+                                                s.grade === 'F' ? 'bg-rose-50 text-rose-600 border-[#EF4444]' :
+                                                s.grade === '' ? 'bg-gray-50 text-gray-400 border-gray-200' : 'bg-gray-100 text-gray-700'
                                             } font-inter">
                                                 <option value="" ${s.grade === '' ? 'selected' : ''}>ยังไม่เรียน</option>
                                                 <option value="A" ${s.grade === 'A' ? 'selected' : ''}>A</option>
@@ -524,93 +534,96 @@
 
             else if (activeTab === 'honor-check') {
                 container.innerHTML = `
-                    <div class="space-y-3.5">
-                        <div class="p-3 rounded-xl neo-box text-center space-y-1.5 shrink-0">
-                            <div class="mx-auto w-9 h-9 rounded-full bg-gradient-to-tr from-amber-400 to-amber-200 flex items-center justify-center shadow">
-                                <i data-lucide="award" class="w-5 h-5 text-amber-800"></i>
+                    <div class="space-y-4 animate-fade-in">
+                        <!-- การ์ดระดับสูงประเมินสิทธิ์ (Radius 30) -->
+                        <div class="p-4 rounded-[30px] neo-box text-center space-y-2 shrink-0 border-2 border-[#00C2B2]">
+                            <div class="mx-auto w-10 h-10 rounded-full bg-gradient-to-tr from-[#00C2B2] to-[#B2E9FF] flex items-center justify-center shadow-sm">
+                                <i data-lucide="award" class="w-5 h-5 text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-xs font-extrabold text-gray-700">เกรดเฉลี่ยปัจจุบัน: ${cal.gpax.toFixed(2)}</h3>
-                                <p class="text-[10px] text-gray-500">ตรวจสอบความสอดคล้องตามเกณฑ์สะสมหลักสูตร</p>
+                                <h3 class="text-xs font-black text-[#132045]">เกรดเฉลี่ยสะสม: ${cal.gpax.toFixed(2)}</h3>
+                                <p class="text-[10px] text-gray-400 font-semibold">ตรวจสอบเงื่อนไขเกียรตินิยมและแผนการศึกษา 4 ปี</p>
                             </div>
                         </div>
 
+                        <!-- รายการข้อกำหนด (ประยุกต์ใช้สีขอบตาม Style Guide) -->
                         <div class="space-y-2 max-h-[42vh] overflow-y-auto pr-1 scrollbar-none">
-                            <h4 class="text-[10px] font-bold text-gray-600 uppercase tracking-wide">การวิเคราะห์เงื่อนไข:</h4>
+                            <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">ผลการวิเคราะห์เกณฑ์:</h4>
 
-                            <!-- 1. GPAX -->
-                            <div class="p-3 rounded-xl neo-box-sm flex items-start space-x-2">
+                            <!-- 1. GPAX (Active หรือ Success) -->
+                            <div class="p-3 rounded-[30px] neo-box-sm flex items-start space-x-2.5 ${cal.gpax >= 3.25 ? 'border-2 border-[#00C2B2]' : 'border-2 border-[#EF4444]'}">
                                 <div class="shrink-0 mt-0.5">
-                                    ${cal.gpax >= 3.25 ? '<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>' : '<i data-lucide="x-circle" class="w-4 h-4 text-rose-500"></i>'}
+                                    ${cal.gpax >= 3.25 ? '<i data-lucide="check-circle-2" class="w-4 h-4 text-[#00C2B2]"></i>' : '<i data-lucide="x-circle" class="w-4 h-4 text-[#EF4444]"></i>'}
                                 </div>
                                 <div class="min-w-0">
-                                    <h5 class="text-xs font-bold text-gray-700 leading-tight">คะแนนสะสมเฉลี่ย (GPAX)</h5>
-                                    <p class="text-[10px] text-gray-500 mt-0.5">อันดับ 1 (3.75+) | อันดับ 2 (3.25 - 3.74)</p>
+                                    <h5 class="text-xs font-extrabold text-[#132045] leading-tight">ผลการเรียนเฉลี่ย (GPAX)</h5>
+                                    <p class="text-[9px] text-gray-400 mt-0.5">อันดับ 1 (3.75+) | อันดับ 2 (3.25 - 3.74)</p>
                                 </div>
                             </div>
 
-                            <!-- 2. No F -->
-                            <div class="p-3 rounded-xl neo-box-sm flex items-start space-x-2">
+                            <!-- 2. No F (ต้องผ่าน) -->
+                            <div class="p-3 rounded-[30px] neo-box-sm flex items-start space-x-2.5 ${!cal.hasF ? 'border-2 border-[#00C2B2]' : 'border-2 border-[#EF4444]'}">
                                 <div class="shrink-0 mt-0.5">
-                                    ${!cal.hasF ? '<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>' : '<i data-lucide="x-circle" class="w-4 h-4 text-rose-500"></i>'}
+                                    ${!cal.hasF ? '<i data-lucide="check-circle-2" class="w-4 h-4 text-[#00C2B2]"></i>' : '<i data-lucide="x-circle" class="w-4 h-4 text-[#EF4444]"></i>'}
                                 </div>
                                 <div class="min-w-0">
-                                    <h5 class="text-xs font-bold text-gray-700 leading-tight">ไม่มีผลการเรียนเกรด F</h5>
-                                    <p class="text-[10px] text-gray-500 mt-0.5">ตลอดวิชาทั้งหมดในระบบต้องไม่ได้รับเกรด F</p>
+                                    <h5 class="text-xs font-extrabold text-[#132045] leading-tight">ประวัติติดเกรด F</h5>
+                                    <p class="text-[9px] text-gray-400 mt-0.5">ข้อบังคับห้ามมีเกรด F ตลอดหลักสูตร</p>
                                 </div>
                             </div>
 
-                            <!-- 3. No Repeat -->
-                            <div class="p-3 rounded-xl neo-box-sm flex items-start space-x-2">
+                            <!-- 3. No Repeat (ห้ามเรียนซ้ำเพื่ออัปเกรด) -->
+                            <div class="p-3 rounded-[30px] neo-box-sm flex items-start space-x-2.5 ${!cal.hasRepeated ? 'border-2 border-[#00C2B2]' : 'border-2 border-[#EF4444]'}">
                                 <div class="shrink-0 mt-0.5">
-                                    ${!cal.hasRepeated ? '<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>' : '<i data-lucide="x-circle" class="w-4 h-4 text-rose-500"></i>'}
+                                    ${!cal.hasRepeated ? '<i data-lucide="check-circle-2" class="w-4 h-4 text-[#00C2B2]"></i>' : '<i data-lucide="x-circle" class="w-4 h-4 text-[#EF4444]"></i>'}
                                 </div>
                                 <div class="min-w-0">
-                                    <h5 class="text-xs font-bold text-gray-700 leading-tight">ไม่มีบันทึกเรียนซ้ำ</h5>
-                                    <p class="text-[10px] text-gray-500 mt-0.5">ไม่เคยทำการลงทะเบียนเรียนวิชาซ้ำเพื่อทำการปรับเกรด</p>
+                                    <h5 class="text-xs font-extrabold text-[#132045] leading-tight">ประวัติลงทะเบียนซ้ำ (รีเกรด)</h5>
+                                    <p class="text-[9px] text-gray-400 mt-0.5">ห้ามเรียนซ้ำในวิชาที่ได้ประเมินผลผ่านแล้ว</p>
                                 </div>
                             </div>
 
-                            <!-- 4. Duration -->
-                            <div class="p-3 rounded-xl neo-box-sm flex items-start space-x-2">
+                            <!-- 4. Duration (ระยะเวลาเรียน 4 ปี) -->
+                            <div class="p-3 rounded-[30px] neo-box-sm flex items-start space-x-2.5 ${durationYears <= 4 ? 'border-2 border-[#00C2B2]' : 'border-2 border-[#EF4444]'}">
                                 <div class="shrink-0 mt-0.5">
-                                    ${durationYears <= 4 ? '<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>' : '<i data-lucide="x-circle" class="w-4 h-4 text-rose-500"></i>'}
+                                    ${durationYears <= 4 ? '<i data-lucide="check-circle-2" class="w-4 h-4 text-[#00C2B2]"></i>' : '<i data-lucide="x-circle" class="w-4 h-4 text-[#EF4444]"></i>'}
                                 </div>
                                 <div class="flex-1 min-w-0">
-                                    <h5 class="text-xs font-bold text-gray-700 leading-tight">ระยะเวลาศึกษาตามกำหนด</h5>
-                                    <p class="text-[10px] text-gray-500 mt-0.5">เรียนจบการศึกษาหลักสูตรภายในเวลา 4 ปีการศึกษาหลัก</p>
+                                    <h5 class="text-xs font-extrabold text-[#132045] leading-tight">สำเร็จการศึกษาตามกำหนด</h5>
+                                    <p class="text-[9px] text-gray-400 mt-0.5">แผนการศึกษาปกติไม่เกิน 4 ปี</p>
                                     
-                                    <div class="mt-2 flex items-center justify-between bg-white/50 p-1.5 rounded-lg border border-gray-300/30">
-                                        <span class="text-[9px] font-bold text-gray-600">ระยะเวลาเรียนจริง:</span>
-                                        <div class="flex items-center space-x-1.5">
-                                            <button onclick="changeDuration(-1)" class="px-1.5 py-0.5 text-[10px] neo-box-xs rounded font-black text-gray-600">-</button>
-                                            <span class="text-xs font-extrabold text-indigo-600 font-inter">${durationYears} ปี</span>
-                                            <button onclick="changeDuration(1)" class="px-1.5 py-0.5 text-[10px] neo-box-xs rounded font-black text-gray-600">+</button>
+                                    <!-- ปุ่มเพิ่มลดปีการศึกษามนแคปซูล Radius 50 -->
+                                    <div class="mt-2 flex items-center justify-between bg-[#E2F8FF] p-1 rounded-[50px] border border-[#B2E9FF]">
+                                        <span class="text-[9px] font-extrabold text-[#009FDF] ml-2">ปีที่ใช้เรียนจริง:</span>
+                                        <div class="flex items-center space-x-1">
+                                            <button onclick="changeDuration(-1)" class="w-5 h-5 flex items-center justify-center text-xs bg-white text-[#009FDF] font-bold rounded-full shadow-xs active:scale-90">-</button>
+                                            <span class="text-xs font-black text-[#132045] px-1 font-inter">${durationYears} ปี</span>
+                                            <button onclick="changeDuration(1)" class="w-5 h-5 flex items-center justify-center text-xs bg-white text-[#009FDF] font-bold rounded-full shadow-xs active:scale-90">+</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- สรุปผล -->
-                        <div class="p-3.5 rounded-xl shrink-0 ${
-                            cal.honorStatus === '1st' ? 'bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-300 text-amber-900' :
-                            cal.honorStatus === '2nd' ? 'bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-300 text-blue-900' :
-                            'bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-300 text-gray-800'
+                        <!-- สรุปผลลัพธ์ (Radius 30 และสีเกรดคู่มือดีไซน์) -->
+                        <div class="p-4 rounded-[30px] shrink-0 ${
+                            cal.honorStatus === '1st' ? 'bg-[#E2F8FF] border-2 border-[#00C2B2] text-[#132045]' :
+                            cal.honorStatus === '2nd' ? 'bg-[#E2F8FF] border-2 border-[#009FDF] text-[#132045]' :
+                            'bg-gray-50 border border-gray-200 text-gray-700'
                         } space-y-1">
                             <h4 class="text-[10px] font-extrabold uppercase tracking-widest flex items-center">
-                                <i data-lucide="graduation-cap" class="w-3.5 h-3.5 mr-1 text-amber-600"></i>
-                                ผลการตรวจสอบสิทธิ์
+                                <i data-lucide="graduation-cap" class="w-4 h-4 mr-1 text-[#00C2B2]"></i>
+                                ผลประเมินเกียรตินิยม
                             </h4>
-                            <p class="text-xs font-extrabold leading-normal">
-                                ${cal.honorStatus === '1st' ? '🎉 ยินดีด้วยอย่างยิ่ง! คุณมีคุณสมบัติครบถ้วนสำหรับ "เกียรตินิยมอันดับ 1"' : ''}
-                                ${cal.honorStatus === '2nd' ? '👏 เก่งมาก! คุณมีคุณสมบัติสำหรับ "เกียรตินิยมอันดับ 2"' : ''}
-                                ${cal.honorStatus === 'none' ? '🤝 สิทธิ์การสำเร็จการศึกษาตามระดับหลักสูตรปกติ' : ''}
+                            <p class="text-xs font-black leading-normal">
+                                ${cal.honorStatus === '1st' ? '🎉 คุณสมบัติผ่านเกณฑ์ "เกียรตินิยมอันดับ 1"' : ''}
+                                ${cal.honorStatus === '2nd' ? '👏 คุณสมบัติผ่านเกณฑ์ "เกียรตินิยมอันดับ 2"' : ''}
+                                ${cal.honorStatus === 'none' ? '🤝 ผ่านเกณฑ์การสำเร็จการศึกษาตามแผนปกติ' : ''}
                             </p>
                             ${cal.honorStatus === 'none' && cal.honorReason.length > 0 ? `
-                                <div class="text-[9px] text-rose-600 mt-1">
-                                    <span class="font-extrabold block mb-0.5">เหตุผลที่ไม่ได้รับสิทธิ์:</span>
-                                    <ul class="list-disc pl-3 space-y-0.5">
+                                <div class="text-[9px] text-rose-500 mt-1">
+                                    <span class="font-extrabold block mb-0.5">สาเหตุหลัก:</span>
+                                    <ul class="list-disc pl-3.5 space-y-0.5">
                                         ${cal.honorReason.map(r => `<li>${r}</li>`).join('')}
                                     </ul>
                                 </div>
@@ -624,7 +637,6 @@
                 const pending = subjects.filter(s => s.grade === '');
                 const pendingCredits = pending.reduce((acc, s) => acc + s.credits, 0);
 
-                // คาดการณ์เกรดเฉลี่ย
                 let totalGradePoints = 0;
                 let gradedCredits = 0;
 
@@ -645,55 +657,56 @@
                 const predictedGpax = gradedCredits > 0 ? totalGradePoints / gradedCredits : 0;
 
                 container.innerHTML = `
-                    <div class="space-y-3.5">
-                        <div class="p-3 rounded-xl neo-box space-y-1 text-center shrink-0">
+                    <div class="space-y-4 animate-fade-in">
+                        <div class="p-4 rounded-[30px] neo-box space-y-1 text-center shrink-0 border-2 border-[#009FDF]">
                             <div class="flex items-center justify-center space-x-1.5">
-                                <i data-lucide="sliders" class="w-4 h-4 text-indigo-500"></i>
-                                <h3 class="text-xs font-extrabold text-gray-700">จำลองผลการศึกษาล่วงหน้า</h3>
+                                <i data-lucide="sliders" class="w-4 h-4 text-[#009FDF]"></i>
+                                <h3 class="text-xs font-extrabold text-[#132045]">จำลองและคาดการณ์ผลการเรียน</h3>
                             </div>
-                            <p class="text-[10px] text-gray-500 leading-normal">
-                                จำลองเกรดสำหรับวิชาที่เหลือทั้งหมด เพื่อตรวจสอบผลลัพธ์ล่วงหน้าก่อนสิ้นการศึกษา
+                            <p class="text-[9px] text-gray-400 font-semibold">
+                                ปรับแต่งเกรดเพื่อประเมินผลสะสมรวมในวิชาที่ยังไม่ประเมิน
                             </p>
                         </div>
 
-                        <div class="p-3 rounded-xl neo-box space-y-2">
-                            <h4 class="text-[10px] font-bold text-gray-700">📌 วิชาที่คงเหลือในแผนหลักสูตร:</h4>
-                            <div class="grid grid-cols-2 gap-2 text-center">
-                                <div class="p-2 rounded-lg neo-inset">
-                                    <span class="text-[9px] text-gray-500 block leading-tight">วิชาที่ยังไม่ประเมิน</span>
-                                    <span class="text-sm font-bold text-indigo-600 font-inter">${pending.length} วิชา</span>
+                        <div class="p-3.5 rounded-[30px] neo-box space-y-2.5">
+                            <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">📌 แผนการศึกษาคงเหลือ:</h4>
+                            <div class="grid grid-cols-2 gap-2.5 text-center">
+                                <div class="p-2.5 rounded-[30px] neo-inset">
+                                    <span class="text-[9px] text-gray-400 block font-bold leading-tight">วิชาที่คงเหลือ</span>
+                                    <span class="text-base font-black text-[#009FDF] font-inter">${pending.length} วิชา</span>
                                 </div>
-                                <div class="p-2 rounded-lg neo-inset">
-                                    <span class="text-[9px] text-gray-500 block leading-tight">หน่วยกิตคงเหลือ</span>
-                                    <span class="text-sm font-bold text-indigo-600 font-inter">${pendingCredits} นก.</span>
+                                <div class="p-2.5 rounded-[30px] neo-inset">
+                                    <span class="text-[9px] text-gray-400 block font-bold leading-tight">หน่วยกิตคงเหลือ</span>
+                                    <span class="text-base font-black text-[#009FDF] font-inter">${pendingCredits} นก.</span>
                                 </div>
                             </div>
                         </div>
 
                         ${pending.length === 0 ? `
-                            <div class="p-3 rounded-xl bg-emerald-50 text-emerald-800 text-[11px] text-center font-bold">
-                                🎉 ข้อมูลการประเมินวิชาทั้งหมดครบ 133 หน่วยกิตเรียบร้อยแล้ว!
+                            <div class="p-4 rounded-[30px] bg-[#E2F8FF] border border-[#00C2B2] text-[#00C2B2] text-xs text-center font-bold">
+                                🎉 ประเมินผลครบทุกหลักสูตร 133 หน่วยกิต เรียบร้อยแล้ว!
                             </div>
                         ` : `
-                            <div class="p-3 rounded-xl neo-box space-y-3">
-                                <div class="space-y-1.5">
-                                    <label class="text-[11px] font-bold text-gray-600 block">
-                                        สมมติวิชาที่เหลือได้เกรดเป้าหมายเท่ากัน:
+                            <div class="p-4 rounded-[30px] neo-box space-y-3.5 border border-gray-100">
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">
+                                        สมมติวิชาทั้งหมดที่เหลือได้เกรด:
                                     </label>
                                     
+                                    <!-- ปุ่มเกรดมนสไตล์ Capsule Radius 50 -->
                                     <div class="flex space-x-1">
                                         ${['A', 'B+', 'B', 'C+', 'C'].map(g => `
-                                            <button onclick="setTargetGrade('${g}')" class="flex-1 py-1.5 text-xs font-bold rounded transition ${targetGrade === g ? 'bg-indigo-600 text-white shadow-md' : 'neo-box-xs text-gray-600 font-inter'}">
+                                            <button onclick="setTargetGrade('${g}')" class="flex-1 py-1.5 text-xs font-black rounded-[50px] transition ${targetGrade === g ? 'bg-[#009FDF] text-white shadow-md' : 'neo-box-xs text-gray-500 font-inter'}">
                                                 ${g}
                                             </button>
                                         `).join('')}
                                     </div>
                                 </div>
 
-                                <div class="p-3 rounded-xl bg-indigo-50 border border-indigo-100 text-center space-y-0.5">
-                                    <span class="text-[9px] uppercase tracking-wider text-indigo-600 font-bold block">เกรดเฉลี่ยสะสมคาดการณ์ (GPAX)</span>
-                                    <h3 class="text-2xl font-extrabold text-indigo-800 font-inter">${predictedGpax.toFixed(2)}</h3>
-                                    <p class="text-[9px] text-gray-400">ประเมินจากสะสมรวม ${gradedCredits} หน่วยกิต</p>
+                                <div class="p-4 rounded-[30px] bg-[#E2F8FF] border border-[#00C2B2] text-center space-y-0.5">
+                                    <span class="text-[9px] uppercase tracking-wider text-[#009FDF] font-extrabold block">เกรดเฉลี่ยสะสมคาดการณ์ (GPAX)</span>
+                                    <h3 class="text-2xl font-black text-[#132045] font-inter">${predictedGpax.toFixed(2)}</h3>
+                                    <p class="text-[9px] text-[#00C2B2] font-semibold">ประมวลผลจากการจำลองทั้งหมด ${gradedCredits} หน่วยกิต</p>
                                 </div>
                             </div>
                         `}
@@ -715,9 +728,9 @@
             tabs.forEach(t => {
                 const btn = document.getElementById(`nav-${t}`);
                 if (t === tabId) {
-                    btn.className = "flex flex-col items-center justify-center flex-1 py-1 transition text-indigo-600 font-bold scale-105";
+                    btn.className = "flex flex-col items-center justify-center flex-1 py-1 transition text-[#009FDF] font-bold scale-105";
                 } else {
-                    btn.className = "flex flex-col items-center justify-center flex-1 py-1 transition text-gray-500";
+                    btn.className = "flex flex-col items-center justify-center flex-1 py-1 transition text-gray-400";
                 }
             });
 
